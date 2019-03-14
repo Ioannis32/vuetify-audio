@@ -12,10 +12,6 @@
                 <v-icon v-if="!isMuted">volume_up</v-icon>
                 <v-icon v-else>volume_off</v-icon>
             </v-btn>
-            <v-btn outline icon class="teal--text" @click.native="loaded ? download() : reload()">
-                <v-icon v-if="!loaded">refresh</v-icon>
-                <v-icon v-else>get_app</v-icon>
-            </v-btn>
             <v-slider @click.native="setPosition()" v-model="percentage" dark :disabled="!loaded"></v-slider>
             <p>{{ currentTime }} / {{ duration }}</p>
         </v-card-text>
