@@ -1,18 +1,18 @@
 <template>
     <v-card style="text-align: center">
         <v-card-text>
-            <v-btn outline icon class="teal--text" @click.native="playing ? pause() : play()" :disabled="!loaded">
+            <v-btn outline icon small class="teal--text" @click.native="playing ? pause() : play()" :disabled="!loaded">
                 <v-icon v-if="!playing || paused">play_arrow</v-icon>
                 <v-icon v-else>pause</v-icon>
             </v-btn>
-            <v-btn outline icon class="teal--text" @click.native="stop()" :disabled="!loaded">
+            <v-btn outline icon small class="teal--text" @click.native="stop()" :disabled="!loaded">
                 <v-icon>stop</v-icon>
             </v-btn>
-            <v-btn outline icon class="teal--text" @click.native="mute()" :disabled="!loaded">
+            <v-btn outline icon small class="teal--text" @click.native="mute()" :disabled="!loaded">
                 <v-icon v-if="!isMuted">volume_up</v-icon>
                 <v-icon v-else>volume_off</v-icon>
             </v-btn>
-            <v-slider @click.native="setPosition()" v-model="percentage" dark :disabled="!loaded"></v-slider>
+            <v-slider @click.native="setPosition()" v-model="percentage" height="0" dark :disabled="!loaded"></v-slider>
         </v-card-text>
         <audio id="player" ref="player" v-on:ended="ended" v-on:canplay="canPlay" :src="file"></audio>
     </v-card>
