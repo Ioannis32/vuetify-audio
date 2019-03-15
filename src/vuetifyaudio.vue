@@ -13,7 +13,7 @@
                 <v-icon v-else>volume_off</v-icon>
             </v-btn>
             <v-slider @click.native="setPosition()" v-model="percentage" dark :disabled="!loaded"></v-slider>
-            <p>{{ currentTime }} / {{ duration }}</p>
+            <span>{{ currentTime }} / {{ duration }}</span>
         </v-card-text>
         <audio id="player" ref="player" v-on:ended="ended" v-on:canplay="canPlay" :src="file"></audio>
     </v-card>
