@@ -13,7 +13,7 @@
                 <v-icon v-else>volume_off</v-icon>
             </v-btn>
             <v-flex xs12>
-                <v-slider style="width: 50%; margin: auto;" color="teal" height="0" @click.native="setPosition()" v-model="percentage" dark :disabled="!loaded"></v-slider>
+                <v-slider style="width: 50%; margin: auto;" color="teal" height="0" @click.native="setPosition()" v-model="percentage" :disabled="!loaded"></v-slider>
             </v-flex>
         </v-card-text>
         <audio id="player" ref="player" v-on:ended="ended" v-on:canplay="canPlay" :src="file"></audio>
