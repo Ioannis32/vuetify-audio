@@ -12,7 +12,9 @@
                 <v-icon v-if="!isMuted">volume_up</v-icon>
                 <v-icon v-else>volume_off</v-icon>
             </v-btn>
-            <v-slider style="width: 70%" @click.native="setPosition()" v-model="percentage" height="0" dark :disabled="!loaded"></v-slider>
+            <v-flex xs12>
+                <v-slider style="width: 50%; margin: auto;" color="teal" height="0" @click.native="setPosition()" v-model="percentage" dark :disabled="!loaded"></v-slider>
+            </v-flex>
         </v-card-text>
         <audio id="player" ref="player" v-on:ended="ended" v-on:canplay="canPlay" :src="file"></audio>
     </v-card>
@@ -41,8 +43,8 @@
             },
         },
         watch: {
-            file(url) {
-                console.log("The new URL is: " + url);
+            file() {
+                this.playing = true;
             }
         },
         computed: {
