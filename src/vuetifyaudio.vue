@@ -16,7 +16,7 @@
                 <v-slider style="width: 50%; margin: auto;" color="teal" height="0" @click.native="setPosition()" v-model="percentage" :disabled="!loaded"></v-slider>
             </v-flex>
         </v-card-text>
-        <audio id="player" ref="player" v-on:ended="ended" v-on:canplay="canPlay" :src="file" :volume="0.1"></audio>
+        <audio id="player" ref="player" v-on:ended="ended" v-on:canplay="canPlay" :src="file" volume="0.1"></audio>
     </v-card>
 </template>
 <script>
