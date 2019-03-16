@@ -149,7 +149,7 @@
         },
         mounted () {
             this.audio = this.$refs.player;
-            this.audio.volume = 0.5;
+            this.audio.volume = 0.3;
             this.init();
         },
         beforeDestroy () {
