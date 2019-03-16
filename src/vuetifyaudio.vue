@@ -45,6 +45,7 @@
         watch: {
             file() {
                 this.playing = true;
+                this.paused = false;
             }
         },
         computed: {
