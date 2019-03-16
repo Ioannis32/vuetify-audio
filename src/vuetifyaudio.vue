@@ -40,6 +40,11 @@
                 default: () => {},
             },
         },
+        watch: {
+            file(url) {
+                console.log("The new URL is: " + url);
+            }
+        },
         computed: {
             duration: function () {
                 return this.audio ? formatTime(this.totalDuration) : ''
