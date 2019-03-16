@@ -92,7 +92,7 @@
             mute () {
                 this.isMuted = !this.isMuted
                 this.audio.muted = this.isMuted
-                this.volumeValue = this.isMuted ? 0 : 50
+                this.volumeValue = this.isMuted ? 0 : 20
             },
             reload () {
                 this.audio.load();
@@ -149,7 +149,8 @@
         },
         mounted () {
             this.audio = this.$refs.player;
-            this.audio.volume = 0.3;
+            this.audio.volume = 0.2;
+            document.getElementById('player').volume = 0.2;
             this.init();
         },
         beforeDestroy () {
